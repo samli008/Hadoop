@@ -1,2 +1,0 @@
-# Hadoop
-Hadoop HDFS Mapreduce
