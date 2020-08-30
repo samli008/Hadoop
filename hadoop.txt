@@ -18,3 +18,11 @@ export JAVA_HOME=/usr/java/jdk1.8.0_261-amd64
 
 # config core-site.xml 
 vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://c03:9000</value>
+  </property>
+</configuration>
+
+# config
