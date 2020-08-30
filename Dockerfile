@@ -19,4 +19,4 @@ docker build -t hadoop .
 docker network create li --subnet=192.168.10.0/24
 
 # create container with docker images
-docker run -d --network liyang --ip 192.168.10.11 -h n11 --name n11 --privileged=true hadoop
+docker run -d --network li --ip 192.168.10.11 -h n11 --name n11 --privileged=true hadoop
