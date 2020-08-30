@@ -27,4 +27,9 @@ vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
 
 # config hdfs-site.xml
 vi /root/hadoop-2.9.2/etc/hadoop/hdfs-site.xml
-
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>1</value>
+  </property>
+</configuration>
