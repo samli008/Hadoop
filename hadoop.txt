@@ -49,5 +49,6 @@ ss -nlpt |grep 9000
 # view HDFS web access ip:50070
 jps
 hdfs dfs -put hadoop-2.9.2.tar.gz /
+hdfs dfs -get /jdk-8u261-linux-x64.rpm
 hdfs dfs -mkdir /liyang
 hdfs dfs -ls /
