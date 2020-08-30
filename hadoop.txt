@@ -39,3 +39,9 @@ vi /root/hadoop-2.9.2/etc/hadoop/slaves
 c03
 c04
 c05
+
+# format HDFS start it 
+hdfs namenode -format
+/root/hadoop-2.9.2/sbin/start-dfs.sh
+ss -nlpt |grep 50070
+ss -nlpt |grep 9000
