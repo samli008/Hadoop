@@ -22,6 +22,10 @@ vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
     <name>fs.defaultFS</name>
     <value>hdfs://c03:9000</value>
   </property>
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/hadoop/data</value>
+  </property>
 </configuration>
 
 # config block replication size
