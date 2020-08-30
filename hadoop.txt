@@ -16,7 +16,7 @@ EOF
 vi /root/hadoop-2.9.2/etc/hadoop/hadoop-env.sh
 export JAVA_HOME=/usr/java/jdk1.8.0_261-amd64
 
-# config core-site.xml 
+# config namenode
 vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
 <configuration>
   <property>
@@ -25,7 +25,7 @@ vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
   </property>
 </configuration>
 
-# config hdfs-site.xml
+# config block replication size
 vi /root/hadoop-2.9.2/etc/hadoop/hdfs-site.xml
 <configuration>
   <property>
@@ -33,3 +33,9 @@ vi /root/hadoop-2.9.2/etc/hadoop/hdfs-site.xml
     <value>1</value>
   </property>
 </configuration>
+
+# config datanode
+vi /root/hadoop-2.9.2/etc/hadoop/slaves
+c03
+c04
+c05
