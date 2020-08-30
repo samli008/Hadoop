@@ -12,3 +12,9 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 export PATH=$PATH:$JAVA_HOME/bin
 EOF
 
+# config hadoop-env.sh
+vi /root/hadoop-2.9.2/etc/hadoop/hadoop-env.sh
+export JAVA_HOME=/usr/java/jdk1.8.0_261-amd64
+
+# config core-site.xml 
+vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
