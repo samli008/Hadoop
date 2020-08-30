@@ -25,4 +25,6 @@ vi /root/hadoop-2.9.2/etc/hadoop/core-site.xml
   </property>
 </configuration>
 
-# config
+# config hdfs-site.xml
+vi /root/hadoop-2.9.2/etc/hadoop/hdfs-site.xml
+
