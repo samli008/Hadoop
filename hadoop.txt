@@ -45,3 +45,6 @@ hdfs namenode -format
 /root/hadoop-2.9.2/sbin/start-dfs.sh
 ss -nlpt |grep 50070
 ss -nlpt |grep 9000
+
+# view HDFS web access ip:50070
+jps
