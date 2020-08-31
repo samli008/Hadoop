@@ -20,4 +20,13 @@ docker build -t hadoop .
 docker network create li --subnet=192.168.10.0/24
 
 # create container with docker images
-docker run -d -p 50070:50070 -p 9000:9000 -v /hadoop:/hadoop --network li --ip 192.168.10.11 -h n11 --name n11 --privileged=true hadoop
+docker run -d -p 50070:50070 -v /hadoop:/hadoop --network li --ip 192.168.10.11 -h n11 --name n11 --privileged=true hadoop
+
+# create hdfs cluster with docker images
+hosts="--add-host n11:192.168.10.11 --add-host n12:192.168.10.12 --add-host n13:192.168.10.13"
+
+mkdir /hadoop{1..3}
+
+docker run -d -p 50070:50070 -v /hadoop1:/hadoop --network li --ip 192.168.10.11 -h n11 --name n11 $hosts --privileged=true hadoop
+docker run -d -v /hadoop2:/hadoop --network li --ip 192.168.10.12 -h n12 --name n12 $hosts --privileged=true hadoop
+docker run -d -v /hadoop3:/hadoop --network li --ip 192.168.10.13 -h n13 --name n13 $hosts --privileged=true hadoop
