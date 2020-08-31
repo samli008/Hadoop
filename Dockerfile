@@ -30,3 +30,11 @@ mkdir /hadoop{1..3}
 docker run -d -p 50070:50070 -v /hadoop1:/hadoop --network li --ip 192.168.10.11 -h n11 --name n11 $hosts --privileged=true hadoop
 docker run -d -v /hadoop2:/hadoop --network li --ip 192.168.10.12 -h n12 --name n12 $hosts --privileged=true hadoop
 docker run -d -v /hadoop3:/hadoop --network li --ip 192.168.10.13 -h n13 --name n13 $hosts --privileged=true hadoop
+
+# view HDFS web access ip:50070
+jps
+hdfs dfsadmin -report
+hdfs dfs -put hadoop-2.9.2.tar.gz /
+hdfs dfs -get /jdk-8u261-linux-x64.rpm
+hdfs dfs -mkdir /liyang
+hdfs dfs -ls /
