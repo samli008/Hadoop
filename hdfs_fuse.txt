@@ -1,0 +1,12 @@
+# install hdfs fuse
+cat >> /etc/yum.repos.d/fuse.repo << EOF
+[fuse]
+name=fuse
+baseurl=file:///root/hdfs_fuse
+enabled=1
+gpgcheck=0
+EOF
+
+yum -y install hadoop-hdfs-fuse
+
+hadoop-fuse-dfs dfs://<name_node_hostname>:<namenode_port> <mount_point>
